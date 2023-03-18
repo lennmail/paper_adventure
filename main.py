@@ -13,6 +13,19 @@
     #certain choices are only possible with certain characters
 
 # maybe implement input function here
+def clean_input(prompt, length):
+    while True:
+        try:
+            choice = int(input(prompt))
+        except ValueError:
+            print("Please do not break our game. Input only integers.")
+            return clean_input(prompt, length)
+        if choice in range(1, length + 1):
+            return choice
+        else:
+            print("Please input only integers between 1 and {}.".format(length))
+            return clean_input(prompt, length)
+
 
 def choose_character():
     #define a function which facilitates character choice
@@ -34,22 +47,15 @@ def choose_character():
     print("The smuggler is scrawny and weak. He wields a blaster and is highly charismatic. He has an affinity for technology.")
     print()
     #check if input is okay
-    while True:
-        try: 
-            choice = int(input("Please type 1, 2, or 3 to denote your choice: "))
-            if choice in (1, 2, 3):
-                if choice == 1:
-                    character = "Jedi"
-                elif choice == 2:
-                    character = "Bounty Hunter"
-                elif choice == 3:
-                    character = "Smuggler"
-            else:
-                print("Please input only integers between 1 and 3.")
-        except ValueError:
-            print("Please do not break our game. Input only integers.")
-        else:
-            break
+    prompt = "Please type 1, 2, or 3 to denote your choice: "
+    length = 3
+    choice = clean_input(prompt, length)
+    if choice == 1:
+        character = "Jedi"
+    elif choice == 2:
+        character = "Bounty Hunter"
+    elif choice == 3:
+        character = "Smuggler"
     print()
     print("Good luck, {}, the {}. And remember: your choices matter!".format(name, character))
     print()
@@ -88,6 +94,5 @@ def intro_sequence(character):
 def main():
     karma = 0
     intro_sequence(choose_character())
-
 
 main()
