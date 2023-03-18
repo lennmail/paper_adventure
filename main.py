@@ -12,11 +12,12 @@
         # Karma
     #certain choices are only possible with certain characters
 
+# maybe implement input function here
 
 def choose_character():
     #define a function which facilitates character choice
     print("Welcome to our text adventure!")
-    print()
+    print("The game is contained to your terminal. Enlarge it and enjoy!")
     print("The following story takes place in the STAR WARS universe.")
     print()
     print()
@@ -24,7 +25,7 @@ def choose_character():
     print("Hello, {}. Before your adventure starts, choose your character:".format(name))
     print()
     print("Option 1: Jedi.")
-    print("This Jedi's agility, wisdom, and control of the force is unmatched. He is quite popular with upright citizens")
+    print("This Jedi's agility, wisdom, and control of the force is unmatched. He is quite popular with upright citizens.")
     print()
     print("Option 2: Bounty Hunter.")
     print("Bounty Hunters are known to be strong and intimidating individuals. He isn't the smartest but his gadgets are helpful.")
@@ -32,7 +33,6 @@ def choose_character():
     print("Option 3: Smuggler")
     print("The smuggler is scrawny and weak. He wields a blaster and is highly charismatic. He has an affinity for technology.")
     print()
-    choice = input("Please type 1, 2, or 3 to denote your choice: ")
     #check if input is okay
     while True:
         try: 
@@ -50,7 +50,6 @@ def choose_character():
             print("Please do not break our game. Input only integers.")
         else:
             break
-
     print()
     print("Good luck, {}, the {}. And remember: your choices matter!".format(name, character))
     print()
@@ -87,6 +86,7 @@ def intro_sequence(character):
 
 
 def main():
+    karma = 0
     intro_sequence(choose_character())
 
 
