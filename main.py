@@ -263,6 +263,22 @@ def prison_choice():
         print("You decide to head to the Black Market before the guards notice. They must be sleeping veeeeeeery tightly you think to yourself.")
         return 1
 
+# def side quest function
+def side_quest(character, karma):
+    # make do thingy
+    return
+
+def market_fight_scene(character, karma):
+    # implement
+    return
+
+# def black market function
+def black_market(character, karma):
+    # implement
+    # call side_quest
+    # call market_fight_scene
+    return
+
 def main():
     karma = 0
     character = choose_character()
