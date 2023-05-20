@@ -7,4 +7,6 @@ After choosing your character (Jedi, Bounty Hunter, and Smuggler) you are able t
 Retrieve a stolen valuable artifact for your faction or your own gain! 
 But look out: your choices have consequences!
 
-Throughout the game you are able to make decisions influencing the path of your story. 
+Throughout the game you are able to make decisions influencing the path of your story.
+
+(The code is a little spaghetti)
